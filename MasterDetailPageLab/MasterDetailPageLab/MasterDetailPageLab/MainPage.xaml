@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MasterDetailPageLab"
+             x:Class="MasterDetailPageLab.MainPage">
+
+    <MasterDetailPage.Master>
+        <!--這裡可以直接定義 ContentPage 內容-->
+        <ContentPage Title="Master" BackgroundColor="Yellow">
+            <StackLayout>
+                <Label Text="功能1" />
+                <Label Text="功能2" />
+                <Label Text="功能3" />
+                <Label Text="功能4" />
+            </StackLayout>
+        </ContentPage>
+
+        <!--這裡也可以使用其他命名空間定義的ContentPage項目-->
+        <!--<local:Page1 />-->
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <!--這裡可以直接定義 ContentPage 內容-->
+        <ContentPage Title="Detail" BackgroundColor="Gray" >
+            <Label Text="這是詳細頁面" />
+        </ContentPage>
+
+        <!--這裡也可以使用其他命名空間定義的ContentPage項目-->
+        <!--<local:Page2 />-->
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

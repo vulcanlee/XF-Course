@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="TabbedPagePrism.Views.New1Page">
+
+    <ContentPage Title="Page1" BackgroundColor="Yellow">
+        <Label Text="Page1" />
+    </ContentPage>
+    <ContentPage Title="Page2" BackgroundColor="Green">
+        <Label Text="Page2" />
+    </ContentPage>
+    <ContentPage Title="Page3" BackgroundColor="Gray">
+        <Label Text="Page3" />
+    </ContentPage>
+
+</TabbedPage>

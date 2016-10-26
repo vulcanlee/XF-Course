@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>vlAttachedProperty</Title>
+      <Author>vulcan_lee@hotmail.com</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vlAttachedProperty</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>EntryType</ID>
+          <ToolTip>EntryType</ToolTip>
+          <Default>EntryType</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>EntryTypeProperty</ID>
+          <ToolTip>EntryTypeProperty</ToolTip>
+          <Default>EntryTypeProperty</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>string</ID>
+          <ToolTip>string</ToolTip>
+          <Default>string</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Entry</ID>
+          <ToolTip>Entry</ToolTip>
+          <Default>Entry</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>null</ID>
+          <ToolTip>null</ToolTip>
+          <Default>null</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>OneWay</ID>
+          <ToolTip>OneWay</ToolTip>
+          <Default>OneWay</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>OnEntryTypeChanged</ID>
+          <ToolTip>OnEntryTypeChanged</ToolTip>
+          <Default>OnEntryTypeChanged</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $EntryType$ Attached Property
+        public static readonly BindableProperty $EntryTypeProperty$ =
+               BindableProperty.CreateAttached(
+                   propertyName: "$EntryType$",
+                   returnType: typeof($string$),
+                   declaringType: typeof($Entry$),
+                   defaultValue: $null$,
+                   defaultBindingMode: BindingMode.$OneWay$,
+                   validateValue: $null$,
+                   propertyChanged: $OnEntryTypeChanged$);
+
+        public static void SetEntryType(BindableObject bindable, $string$ entryType)
+        {
+            bindable.SetValue($EntryTypeProperty$, entryType);
+        }
+        public static $string$ GetEntryType(BindableObject bindable)
+        {
+            return ($string$)bindable.GetValue($EntryTypeProperty$);
+        }
+        #endregion
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

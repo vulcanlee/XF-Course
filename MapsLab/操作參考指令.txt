@@ -1,0 +1,44 @@
+﻿xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+
+
+    <StackLayout VerticalOptions="FillAndExpand" Padding="0">
+        <maps:Map x:Name="TestMap" IsShowingUser="true" MapType="Street" />
+    </StackLayout>
+
+
+※ 您系統中使用的 JDK 路徑
+C:\Program Files\Java\jdk1.8.0_102\bin\keytool.exe
+
+※ Visual Studio 進行除錯時候用的金鑰所在路徑與檔案
+C:\Users\%username%\AppData\Local\Xamarin\Mono for Android\debug.keystore
+
+※ 取得除錯的簽屬檔案指紋指令
+"C:\Program Files\Java\jdk1.8.0_102\bin\keytool.exe" -list -v -keystore "C:\Users\%username%\AppData\Local\Xamarin\Mono for Android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+SHA1指紋
+3C:D6:80:32:35:70:72:58:43:74:81:E6:F4:AB:C3:5E:65:55:DD:85
+
+※ Google API 控制台
+https://console.developers.google.com/iam-admin/projects
+
+com.doggy.mapslab
+AIzaSyDcWMhx3v4iA8vAWKg9B9tZW-ywjXcdDVQ
+
+
+※ Android Manifest 需要用到的權限
+AccessCoarseLocation
+AccessFineLocation
+AccessLocationExtraCommands
+AccessMockLocation
+AccessNetworkState
+AccessWifiState
+Internet
+
+
+
+    <application android:label="$safeprojectname$">
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDcWMhx3v4iA8vAWKg9B9tZW-ywjXcdDVQ" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    </application>
+
+

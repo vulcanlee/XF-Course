@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Blue"
+             Title="Page1"             
+             x:Class="NavigationPageLab.Page1">
+    <Label Text="這是頁面1，可以回到上一頁" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

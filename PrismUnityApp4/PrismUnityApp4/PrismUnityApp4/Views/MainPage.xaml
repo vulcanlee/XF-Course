@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PrismUnityApp4.Views.MainPage"
+             Title="MainPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Button Text="顯示New1Page" Command="{Binding 顯示New1PageCommand}" />
+        <Button Text="深層連結" Command="{Binding 深層連結Command}"/>
+        <Button Text="顯示對話窗" Command="{Binding 顯示對話窗Command}" />
+        <Button Text="你是誰" Command="{Binding 你是誰Command}" />
+        <Label Text="{Binding 你是誰Label}" />
+        <Label Text="{Binding EchoMessageLabel}" />
+    </StackLayout>
+</ContentPage>

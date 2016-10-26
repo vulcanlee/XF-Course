@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ContentPagePrism.Views.MainPage"
+             Title="MainPage">
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Switch IsToggled="{Binding 是否啟用, Mode=TwoWay}" />
+        <Button Text="切換到新頁面，實體按鍵可返回" Command="{Binding 切換到新頁面Command}" />
+    </StackLayout>
+</ContentPage>

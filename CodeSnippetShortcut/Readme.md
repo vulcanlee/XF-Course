@@ -1,0 +1,39 @@
+vlmvvmproperty
+  vlMVVMProperty.snippet
+vlINavigationServiceCtorDI
+  vlPrismINavigationService.snippet
+vlIEventAggregatorCtorDI
+  vlPrismIEventAggregator.snippet
+vlIPageDialogServiceCtorDI
+  vlPrismIPageDialogService.snippet
+
+vlINavigationServiceDeclaration
+  vlPrismINavigationServiceDeclaration.snippet
+vlIEventAggregatorDeclaration
+  vlPrismIEventAggregatorDeclaration.snippet
+vlIPageDialogServiceDeclaration
+  vlPrismIPageDialogServiceDeclaration.snippet
+
+vlINavigationServiceInitialization
+  vlPrismINavigationServiceInitialization.snippet
+vlIEventAggregatorInitialization
+  vlPrismIEventAggregatorInitialization.snippet
+vlIPageDialogServiceInitialization
+  vlPrismIPageDialogServiceDInitialization.snippet
+
+vlXAMLCompilation
+  vlXAMLCompilation.snippet
+
+vlOSDependencyDeclaration
+  vlOSDependencyDeclaration.snippet
+
+vlUWPTitleStatusBarInitialization
+
+
+
+
+
+
+
+
+

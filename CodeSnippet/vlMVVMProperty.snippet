@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>vlMVVMProperty</Title>
+      <Author>vulcan_lee@hotmail.com</Author>
+      <Description>用於產生 MVVM 內的 Property，且可以呼叫 OnPropertyChanged</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vlmvvmproperty</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>propertyFieldName</ID>
+          <ToolTip>Property Field Name</ToolTip>
+          <Default>propertyName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>PropertyName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyType</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>string</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyDescription</ID>
+          <ToolTip>Property Description</ToolTip>
+          <Default>PropertyDescription</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$" Kind="method body"><![CDATA[#region $propertyName$
+ private $propertyType$ $propertyFieldName$ ;
+ /// <summary>
+/// $propertyDescription$
+/// </summary>
+public $propertyType$ $propertyName$
+{
+    get { return this.$propertyFieldName$; }
+    set { this.SetProperty(ref this.$propertyFieldName$, value); }
+}
+#endregion
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

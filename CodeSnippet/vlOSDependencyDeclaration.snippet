@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>vlOSDependencyDeclaration</Title>
+      <Author>vulcan_lee@hotmail.com</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vlOSDependencyDeclaration</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>DependencyClassType</ID>
+          <ToolTip>Dependency Class Type Name</ToolTip>
+          <Default>DependencyClassType</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[[assembly: Xamarin.Forms.Dependency(typeof($DependencyClassType$))]]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

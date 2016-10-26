@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>vlRenderer</Title>
+      <Author>vulcan_lee@hotmail.com</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vlRenderer</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Label</ID>
+          <ToolTip>Renderer Type</ToolTip>
+          <Default>RendererType</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>AwesomeLabelRenderer</ID>
+          <ToolTip>Renderer Implementation Type</ToolTip>
+          <Default>RendererImplementType</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[[assembly: ExportRenderer(typeof($Label$), typeof($AwesomeLabelRenderer$))]]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

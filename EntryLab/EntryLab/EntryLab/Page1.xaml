@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             x:Class="EntryLab.Page1">
+    <StackLayout
+        Margin="20"
+        VerticalOptions="Center">
+        <Label Text="Hello Xamarin" TextColor="White"/>
+        <Entry Placeholder="Please enter your name" />
+        <Label Text="Color Xamarin"
+               TextColor="Green"/>
+        <Label Text="Color Xamarin"
+               TextColor="Pink"/>
+        <Label Text="Color Xamarin"
+               TextColor="Pink"/>
+    </StackLayout>
+</ContentPage>

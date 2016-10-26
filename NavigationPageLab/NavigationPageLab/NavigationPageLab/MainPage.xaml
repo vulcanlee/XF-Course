@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NavigationPageLab"
+             BackgroundColor="Yellow"
+             Title="MainPage"
+             x:Class="NavigationPageLab.MainPage">
+
+    <StackLayout>
+        <Label Text="Welcome to Xamarin Forms!"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+        <Button x:Name="btnPage1" Text="切換到 Page1，無法回到上一頁" />
+        <Button x:Name="btnNaviPage1" Text="使用 Navigate 切換到 Page1" />
+    </StackLayout>
+
+</ContentPage>

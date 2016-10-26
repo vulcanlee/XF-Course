@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="DynaDrawer.Views.MDPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage 
+            BackgroundColor="#c9e084"
+            Title="主功能表" >
+            <StackLayout
+                Orientation="Vertical"  Spacing="20"
+                >
+                <Grid>
+                    <BoxView Color="#af843f" HeightRequest="120" />
+                    <Label Text="多奇數位創意" TextColor="White" FontSize="Large"
+                           HorizontalOptions="Center" VerticalOptions="Center"
+                           />
+                </Grid>
+
+                <ScrollView
+                    Margin="10,30"
+                    Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Spacing="10" >
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding 功能表SL1Command}" />
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="{Binding 功能表箭頭1}"
+                                       TextColor="#709600"
+                                       FontSize="Large"/>
+                                <Label Text="主功能1"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+
+                            </StackLayout>
+                            
+                            <StackLayout IsVisible="{Binding 功能表點選1}">
+                                    <StackLayout Orientation="Horizontal">
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                        <BoxView Color="Red" WidthRequest="80"/>
+                                    </StackLayout>
+
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout  Spacing="10" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal"                             
+                             >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding 功能表SL2Command}" />
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="{Binding 功能表箭頭2}" 
+                                       TextColor="#709600"
+                                       FontSize="Large"/>
+                                <Label Text="主功能2"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding 功能表點選2}"
+                                Orientation="Vertical" Margin="30,0">
+                                <Label Text="子功能2-1"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-2"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-3"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-4"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-5"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-6"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-7"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能2-8"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Spacing="10" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding 功能表SL3Command}" />
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="{Binding 功能表箭頭3}" 
+                                       TextColor="#709600"
+                                       FontSize="Large"/>
+                                <Label Text="主功能3"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                            </StackLayout>
+
+                            <StackLayout IsVisible="{Binding 功能表點選3}"
+                                         Margin="30,0"
+                                         Orientation="Vertical">
+                                <Label Text="子功能3-1"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能3-2"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能3-3"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能3-4"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                                <Label Text="子功能3-5"
+                                       FontSize="Large"
+                                       TextColor="#709600"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>

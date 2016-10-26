@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>vlMVVMObservableCollection</Title>
+      <Author>vulcan_lee@hotmail.com</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vlMVVMObservableCollection</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MyItemViewModel</ID>
+          <ToolTip>Item Model Class Name</ToolTip>
+          <Default>MyItemViewModel</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>myItemList</ID>
+          <ToolTip>Private List Item Object</ToolTip>
+          <Default>myItemList</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>MyItemList</ID>
+          <ToolTip>Public List Item Object					</ToolTip>
+          <Default>MyItemList</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $MyItemList$
+        private ObservableCollection<$MyItemViewModel$> $myItemList$;
+        /// <summary>
+        /// $MyItemList$
+        /// </summary>
+        public ObservableCollection<$MyItemViewModel$> $MyItemList$
+        {
+            get { return $myItemList$; }
+            set { SetProperty(ref $myItemList$, value); }
+        }
+        #endregion
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

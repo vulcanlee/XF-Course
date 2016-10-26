@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserCtrlEntry.UserControls.MyEntry">
+    <Grid
+        RowSpacing="0" ColumnSpacing="0"
+        >
+        <!--這個 Grid 切割成兩個垂直列，前者佔據剩下所有空間，後者佔據 50單位-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+        
+        <!--使用者輸入文字地方的底色設定-->
+        <BoxView 
+            Grid.Row="0" Grid.Column="0"
+            VerticalOptions="Fill" HorizontalOptions="Fill"
+            Color="#44f4dda6"
+            />
+        
+        <!--使用者輸入文字的控制項，會自動依類型顯示浮水印文字-->
+        <Entry
+            Grid.Row="0" Grid.Column="0"
+            Placeholder="{Binding MyPlaceholder}" 
+            Text="{Binding MyEntryText}"
+            />
+        
+        <!--提示輸入內容是否正確的顏色方框，紅色，輸入錯誤，綠色，輸入格是正確-->
+        <BoxView 
+            Grid.Row="0" Grid.Column="1"
+            WidthRequest="50"
+            VerticalOptions="Fill"
+            Color="{Binding ValueCorrectBoxBackground}"
+            />
+        
+        <!--標是這個文字輸入是否正確，正確:V 不正確:X-->
+        <Label
+            Grid.Row="0" Grid.Column="1"
+            HorizontalOptions="Center" VerticalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="White"
+            Text="{Binding ValueCorrectSymbol}" />
+    </Grid>
+</ContentView>

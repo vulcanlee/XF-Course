@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:UserControls="clr-namespace:UserCtrlEntry.UserControls"
+             x:Class="UserCtrlEntry.Views.MainPage"
+             Title="MainPage">
+    <StackLayout 
+        Margin="20,0"
+        HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="使用者控制項與商業邏輯包裝範例" HorizontalOptions="Center" />
+        <!--宣告一個使用者控制項，並且綁定 ViewModel 內的 Name Property，設定這個文字輸入盒，具有輸入字串長度檢查能力-->
+        <UserControls:MyEntry BindingContext="{Binding Name}"/>
+        <!--宣告一個使用者控制項，並且綁定 ViewModel 內的 ID Property，設定這個文字輸入盒，具有輸入身分證字號檢查能力-->
+        <UserControls:MyEntry BindingContext="{Binding ID}"/>
+        <!--宣告一個使用者控制項，並且綁定 ViewModel 內的 Email Property，設定這個文字輸入盒，具有輸入電子郵件格式檢查能力-->
+        <UserControls:MyEntry BindingContext="{Binding Email}"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
+             x:Class="SimpleListView1.Views.MainPage"
+             Title="MainPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <!--<ListView ItemsSource="{Binding 學生List}"
+                  ItemSelected="ListView_ItemSelected">-->
+        <ListView ItemsSource="{Binding 學生List}"
+                  SelectedItem="{Binding 選擇的學生}">
+            <ListView.Behaviors>
+                <behaviors:EventHandlerBehavior EventName="ItemTapped">
+                    <behaviors:InvokeCommandAction Command="{Binding 學生點選Command}"  />
+                </behaviors:EventHandlerBehavior>
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Horizontal">
+                            <Label Text="{Binding 姓名}"/>
+                            <Label Text="{Binding 性別}"/>
+                            <Label Text="{Binding 年齡}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

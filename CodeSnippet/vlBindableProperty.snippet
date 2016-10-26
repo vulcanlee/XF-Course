@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>vlBindableProperty</Title>
+      <Author>vulcan_lee@hotmail.com</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>vlBindableProperty</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>EntryType</ID>
+          <ToolTip>屬性名稱</ToolTip>
+          <Default>BindablePropertyType</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>EntryTypeProperty</ID>
+          <ToolTip>Bindable Property 的型別 Property</ToolTip>
+          <Default>BindablePropertyTypeProperty</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>string</ID>
+          <ToolTip>回傳類型</ToolTip>
+          <Default>string</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>DoggyEntry</ID>
+          <ToolTip>宣告類型</ToolTip>
+          <Default>DoggyEntry</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>"None"</ID>
+          <ToolTip>預設值</ToolTip>
+          <Default>"None"</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>OnEntryTypeChanged</ID>
+          <ToolTip>Bindable Property Change Event</ToolTip>
+          <Default>OnEntryTypeChanged</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $EntryType$ BindableProperty
+        public static readonly BindableProperty $EntryTypeProperty$ =
+            BindableProperty.Create("$EntryType$", // 屬性名稱 
+                typeof($string$), // 回傳類型 
+                typeof($DoggyEntry$), // 宣告類型 
+                $"None"$, // 預設值 
+                propertyChanged: $OnEntryTypeChanged$);
+
+        public $string$ $EntryType$
+        {
+            set
+            {
+                SetValue($EntryTypeProperty$, value);
+            }
+            get
+            {
+                return ($string$)GetValue($EntryTypeProperty$);
+            }
+        }
+        #endregion
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

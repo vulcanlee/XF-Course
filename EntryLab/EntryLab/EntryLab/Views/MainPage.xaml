@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="EntryLab.Views.MainPage"
+             Title="MainPage">
+
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center"
+                 Margin="20,0">
+        <Label Text="一般" />
+        <Entry Placeholder="請輸入電話號碼" Keyboard="Telephone"/>
+        <Label Text="浮水印與字體顏色" />
+        <Entry Placeholder="請輸入郵件信箱" Keyboard="Email"
+               Text="name@bar.com"
+               TextColor="Red"
+               PlaceholderColor="Blue"
+               />
+        <Label Text="字體設定" />
+        <Entry Placeholder="請輸入姓名" Text="王小明"
+               FontSize="24"
+               FontAttributes="Bold,Italic"
+               />
+    </StackLayout>
+</ContentPage>
