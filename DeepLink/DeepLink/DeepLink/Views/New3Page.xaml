@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DeepLink.Views.New3Page"
+             Title="New3Page"
+             BackgroundColor="Red"
+             >
+
+    <Label
+        HorizontalOptions="Center" VerticalOptions="Center"
+        Text="New3Page" FontSize="Large"
+        TextColor="White"/>
+</ContentPage>

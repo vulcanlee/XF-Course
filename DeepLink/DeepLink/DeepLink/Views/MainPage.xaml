@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DeepLink.Views.MainPage"
+             Title="MainPage">
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <Label Text="{Binding Title}" />
+        <Button Text="Navi > P1" Command="{Binding 導航到一個頁面Command}" />
+        <Button Text="Navi > P1 > P2 > P3" Command="{Binding 連續導航到兩個頁面Command}" />
+        <Button Text="Navi > P1 > P2 > P3" Command="{Binding 連續導航到兩個頁面_但手動Command}" />
+    </StackLayout>
+</ContentPage>
