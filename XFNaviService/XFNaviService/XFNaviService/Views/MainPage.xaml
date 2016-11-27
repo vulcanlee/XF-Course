@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XFNaviService.Views.MainPage"
+             Title="MainPage">
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <Label Text="{Binding Title}" />
+        <Label
+            Text="請在不同模式、情境(ContentPage, NavigationPage, MasterDetailPage)下，導航到不同頁面，接著使用實體、軟體控制回上一頁按鍵或者程式控制回上一頁按鍵，觀察是否可以正常運作；並且查看導航事件被呼叫次數。最後，思考，為什麼會產生這樣的執行結果，你可以說明出來嗎?"
+            LineBreakMode="WordWrap"
+            TextColor="Red"
+            FontAttributes="Bold"
+            FontSize="16"
+            />
+        <Label
+            Text="MD => MasterDetailPage"
+            LineBreakMode="WordWrap"
+            TextColor="Navy"
+            />
+
+        <Label
+            Text="NAVI => NavigationPage"
+            LineBreakMode="WordWrap"
+            TextColor="Navy"
+            />
+
+
+        <Button Text="使用ContentPage，沒有MD與Navi" Command="{Binding 沒有MD與NaviCommand}" />
+        <Label Text="_navigationService.NavigateAsync(&quot;NaviDemoHomePage&quot;);"/>
+        <Button Text="使用Navi，不使用MD" Command="{Binding 不使用MasterDetailPageCommand}" />
+        <Label Text="_navigationService.NavigateAsync(&quot;NaviPage/NaviDemoHomePage&quot;);"/>
+        <Button Text="使用Navi + MD" Command="{Binding 使用MasterDetailPageCommand}" />
+        <Label Text="_navigationService.NavigateAsync(&quot;MDPage/NaviPage/NaviDemoHomePage&quot;);"/>
+    </StackLayout>
+</ContentPage>

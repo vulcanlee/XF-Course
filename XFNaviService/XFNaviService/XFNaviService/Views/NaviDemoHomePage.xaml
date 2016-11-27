@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XFNaviService.Views.NaviDemoHomePage"
+             Title="導航測試首頁"
+             BackgroundColor="Orange"
+             >
+
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="Center" VerticalOptions="Center"
+        >
+        <Button Text="導航到第1頁" Command="{Binding 導航到第1頁Command}"/>
+        <Button Text="深度導航到第1 > 2 > 3頁" Command="{Binding 深度導航到第123頁Command}"/>
+        <Button Text="深度導航到Navi>第1 > 2 > 3頁" Command="{Binding 深度導航到Navi第123頁Command}"/>
+        <Button Text="修正深度導航到第1 > 2 > 3頁" Command="{Binding 修正深度導航到第123頁Command}"/>
+    </StackLayout>
+</ContentPage>

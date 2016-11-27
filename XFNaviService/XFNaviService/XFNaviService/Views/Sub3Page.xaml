@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XFNaviService.Views.Sub3Page"
+             Title="頁面3"
+             BackgroundColor="Pink"
+             >
+    <StackLayout
+        HorizontalOptions="Center" VerticalOptions="Center"
+        Orientation="Vertical">
+        <Label Text="這是頁面3" />
+        <Button Text="回上一頁" Command="{Binding 回上一頁Command}" />
+        <Label
+            Text="這個訊息用來偵測軟體、實體回上一頁按鍵與程式控制回上一頁的事件呼叫"
+            LineBreakMode="CharacterWrap"
+            Margin="0,0,0,10" />
+        <Label 
+            Text="{Binding OnNavigationToLog}"
+            LineBreakMode="CharacterWrap" />
+    </StackLayout>
+  
+</ContentPage>

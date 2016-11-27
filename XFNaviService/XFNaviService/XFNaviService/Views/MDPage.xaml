@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="XFNaviService.Views.MDPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+            <StackLayout
+                Orientation="Vertical"
+                HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Text="在MD頁面中，切換到頁面2" Command="{Binding 在MD頁面中切換到頁面2Command}"/>
+                <Button Text="在導航頁面中，切換到頁面2" Command="{Binding 在導航頁面中切換到頁面2Command}"/>
+                <Button Text="絕對導航切換到頁面2" Command="{Binding 絕對導航切換到頁面2Command}"/>
+                <Button Text="絕對導航(無MD)切換到頁面2" Command="{Binding 絕對導航2切換到頁面2Command}"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+</MasterDetailPage>
