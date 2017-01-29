@@ -6,6 +6,12 @@
              x:Class="PrismUnityApp8.Views.MainPage"
              Title="MainPage">
 
+    <!--標籤式頁面 TabbedPage 具有圖片的使用練習
+    在這個練習中，您需要在標籤式頁面內，加入多個 ContentPage 項目，並且每個項目一定要定義
+    Title 屬性、設定 Icon 屬性，這樣，就完成了標籤式頁面的設計。
+    您需要將圖片檔案複製到原生專案的指定位置內，若每個原生專案的圖片路徑不太相同，
+    可以使用 OnPlatform x:TypeArguments 來指定個平台的圖片位置-->
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="OK" Clicked="ToolbarItem_Clicked">
             <ToolbarItem.Icon>

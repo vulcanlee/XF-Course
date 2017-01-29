@@ -7,6 +7,8 @@
              x:Class="MapsLab.Views.MainPage"
              Title="MainPage">
 
+    <!--練習如何在 Xamarin.Forms 顯示地圖-->
+    
     <StackLayout VerticalOptions="FillAndExpand" Padding="0">
         <maps:Map x:Name="TestMap" IsShowingUser="true" MapType="Street" />
     </StackLayout>

@@ -5,6 +5,10 @@
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="TabbedPagePrism.Views.New1Page">
 
+    <!--在 Prism 下，設計標籤式頁面 TabbedPage 的使用練習
+    在這個練習中，您需要在標籤式頁面內，加入多個 ContentPage 項目，並且每個項目一定要定義
+    Title 屬性，這樣，就完成了標籤式頁面的設計-->
+
     <ContentPage Title="Page1" BackgroundColor="Yellow">
         <Label Text="Page1" />
     </ContentPage>

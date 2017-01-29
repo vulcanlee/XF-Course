@@ -4,18 +4,24 @@
              xmlns:local="clr-namespace:AbsoluteLayoutLab"
              x:Class="AbsoluteLayoutLab.MainPage">
 
+    <!--AbsoluteLayout 讓您可以使用絕對座標的方式，配製容器內的控制項所要顯示的位置
+    這個專案，將會提供您練習使用 XAML AbsoluteLayout 這個版面配置的用法-->
+    
     <AbsoluteLayout>
         <Label Text="使用 AbsoluteLayout 絕對值 來標示文字要顯示的位置與大小"
                 AbsoluteLayout.LayoutBounds="50,50,100,100" LineBreakMode="WordWrap"  />
         <Label Text="使用 AbsoluteLayout 比例值 來標示文字要顯示的位置與大小"
                 AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All"
                 LineBreakMode="WordWrap"  />
+        
         <!--位置為比例值，尺寸為絕對值-->
         <BoxView Color="Green"  AbsoluteLayout.LayoutBounds="1,.5, 25, 100"
                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
         <!--位置為比例值，尺寸為絕對值-->
         <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,.5,25,100"
                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
         <!--位置為比例值，尺寸為絕對值-->
         <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".5,0,100,25"
                 AbsoluteLayout.LayoutFlags="PositionProportional" />

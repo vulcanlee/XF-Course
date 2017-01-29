@@ -4,12 +4,21 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismUnityApp4.Views.MainPage"
-             Title="MainPage">
+             Title="Prism 核心服務與功能練習">
+
+    <!--Prism 核心服務與功能練習
+    在這裡，您將會學會如何在進行頁面導航的時候，傳遞參數到下個頁面中、如何在新頁面中將參數取得回來、
+    使用深層導航，一次導航到多個頁面；對話窗服務功能的使用、使用相依性服務注入技巧、建構式注入物件。-->
+
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="{Binding Title}" />
+        <!--使用 NavigationParameters 將導航參數，傳遞到下一個頁面內-->
         <Button Text="顯示New1Page" Command="{Binding 顯示New1PageCommand}" />
+        <!--使用 Prism 深層導航 URI，一次導航到多個頁面-->
         <Button Text="深層連結" Command="{Binding 深層連結Command}"/>
+        <!--使用 IPageDialogService 顯示對話窗-->
         <Button Text="顯示對話窗" Command="{Binding 顯示對話窗Command}" />
+        <!--使用相依性服務注入技巧，取得注入的物件，並且執行該注入物件方法(會在原生系統內，使用原生API來執行)-->
         <Button Text="你是誰" Command="{Binding 你是誰Command}" />
         <Label Text="{Binding 你是誰Label}" />
         <Label Text="{Binding EchoMessageLabel}" />

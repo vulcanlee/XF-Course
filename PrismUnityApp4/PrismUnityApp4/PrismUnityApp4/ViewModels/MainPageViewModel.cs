@@ -75,6 +75,9 @@ namespace PrismUnityApp4.ViewModels
             EchoMessageLabel = $"{obj} ... {obj} ...{obj} ...";
         }
 
+        /// <summary>
+        /// 使用相依性服務注入技巧，取得注入的物件，並且執行該注入物件方法(會在原生系統內，使用原生API來執行)
+        /// </summary>
         private void 你是誰()
         {
             你是誰Label = _IWhoAreYou.Hello();
@@ -85,11 +88,17 @@ namespace PrismUnityApp4.ViewModels
             var foo = await _dialogService.DisplayAlertAsync("警告", "我正在學習 Xamarin.Forms", "OK", "沒有");
         }
 
+        /// <summary>
+        /// 使用 Prism 深層導航 URI，一次導航到多個頁面
+        /// </summary>
         private async void 深層連結()
         {
             await _navigationService.NavigateAsync("New1Page/NaviPage/New2Page");
         }
 
+        /// <summary>
+        /// 切換到另外一個頁面，但是，需要傳遞一些參數過去
+        /// </summary>
         private async void 顯示New1Page()
         {
             NavigationParameters foo = new NavigationParameters();

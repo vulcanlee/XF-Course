@@ -117,6 +117,10 @@ namespace DynaDrawer.ViewModels
             功能表樣式更新();
         }
 
+        /// <summary>
+        /// 根據功能表項目是否有展開，而變更相關表示符號
+        /// 要更加好看，可以使用 Font Awesome字體或者圖片
+        /// </summary>
         private void 功能表樣式更新()
         {
             if (功能表點選1 == false)

@@ -7,6 +7,10 @@ using System.Linq;
 
 namespace ContentPagePrism.ViewModels
 {
+    /// <summary>
+    /// 使用 MVVM 的方式來開發，因此，所有該頁面中的商業邏輯與C#程式碼，都會寫在這個 ViewModel 中
+    /// 原則上，ViewModel 並不知道是哪個頁面正在使用它
+    /// </summary>
     public class MainPageViewModel : BindableBase, INavigationAware
     {
         private string _title;
@@ -16,7 +20,7 @@ namespace ContentPagePrism.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        #region 是否啟用
+        #region 是否啟用(用來控制頁面上的按鈕，是否可以使用)
         private bool _是否啟用 = true;
         /// <summary>
         /// 是否啟用
@@ -24,7 +28,12 @@ namespace ContentPagePrism.ViewModels
         public bool 是否啟用
         {
             get { return this._是否啟用; }
-            set { this.SetProperty(ref this._是否啟用, value); 切換到新頁面Command.RaiseCanExecuteChanged(); }
+            set
+            {
+                this.SetProperty(ref this._是否啟用, value);
+                // 在這裡，發出通知事件，告知這個 ICommand 是否可以被啟用的狀態有變更了
+                切換到新頁面Command.RaiseCanExecuteChanged();
+            }
         }
         #endregion
 
@@ -33,7 +42,9 @@ namespace ContentPagePrism.ViewModels
 
         public MainPageViewModel(INavigationService navigationService)
         {
+            // 在這裡透過建構式注入方法，注入了 Prism 的導航物件，透過這個物件，您就可以在 Xamarin.Forms中進行，頁面導航的操作
             _navigationService = navigationService;
+            //在這裡設定當這個 ICommand 是否可以被執行的委派方法和當這個命令要執行的時候，要執行的委派方法
             切換到新頁面Command = new DelegateCommand(切換到新頁面, Can切換到新頁面);
         }
 

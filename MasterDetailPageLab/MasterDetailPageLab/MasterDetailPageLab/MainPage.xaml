@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:MasterDetailPageLab"
              x:Class="MasterDetailPageLab.MainPage">
 
+    <!--這個範例專案，使用 Xamarin.Forms 建立一個導航抽屜頁面應用程式，不過，沒有使用 NavigationPage
+    您可以嘗試與 這個專案來做比較-->
+    
     <MasterDetailPage.Master>
         <!--這裡可以直接定義 ContentPage 內容-->
         <ContentPage Title="Master" BackgroundColor="Yellow">

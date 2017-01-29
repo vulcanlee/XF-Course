@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:MasterDetailPage1Lab"
              x:Class="MasterDetailPage1Lab.MainPage">
 
+    使用 Xamarin.Forms 的基本方法，建立一個具有導航抽屜功能的應用程式。
+    在這裡，您需要指定 MasterDetailPage.Master / MasterDetailPage.Detail 這兩個屬性，
+    進行設定導航抽屜與子頁面的內容
+    
     <MasterDetailPage.Master>
         <ContentPage Title="Master" BackgroundColor="Yellow" Icon="hamburger.png">
             <Label Text="Master Page"/>
@@ -11,6 +15,7 @@
     </MasterDetailPage.Master>
 
     <MasterDetailPage.Detail>
+        <!--這裡建立一個導航頁面，不過，需要您提供一個建構是參數，因此，使用 x:Arguments 提供一個 ContentPage，作為建構式使用的參數-->
         <NavigationPage>
             <x:Arguments>
                 <ContentPage Title="Detail" BackgroundColor="Gray">

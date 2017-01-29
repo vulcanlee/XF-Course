@@ -6,7 +6,13 @@
              xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
              x:Class="SimpleListView1.Views.MainPage"
              Title="MainPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    
+    <!--練習如何使用 ListView 控制項
+    建立每個紀錄要用到的類別、使用 ObservableCollection<T>建立要綁定到XAML的集合物件、
+    綁定 SelectedItem 屬性、使用 Behavior 綁定ItemTapped事件與ICommand、
+    設計每筆紀錄要出現的樣貌 ListView.ItemTemplate-->
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <!--<ListView ItemsSource="{Binding 學生List}"
                   ItemSelected="ListView_ItemSelected">-->
         <ListView ItemsSource="{Binding 學生List}"

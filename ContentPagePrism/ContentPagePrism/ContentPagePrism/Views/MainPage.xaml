@@ -5,8 +5,15 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ContentPagePrism.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+    <!--練習在 Prism 中，使用導航頁面的操作；
+    這個應用程式的第一個頁面使用 NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms"); 方式進入，
+    可以操作與測試看，與一般應用程式有何不同，為何不會閃退(與傳統 Xamarin.Forms Code Behind 的做法-->
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <!--這個控制項可以控制頁面上的按鈕，是否可以正常使用，這是透過了 ICommand 內所提供的功能-->
         <Switch IsToggled="{Binding 是否啟用, Mode=TwoWay}" />
+        <!--這個按鈕按下去之後，將會使用 ViewModel 內所綁定的 ICommand 介面指定的方法來執行相關處理邏輯-->
         <Button Text="切換到新頁面，實體按鍵可返回" Command="{Binding 切換到新頁面Command}" />
     </StackLayout>
 </ContentPage>

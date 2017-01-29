@@ -5,6 +5,8 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismUnityApp5.Views.MainPage"
              Title="MainPage">
+    
+    <!--在這個練習專案中，將會學習各種資料綁定 Data Binding 的方法與技巧-->
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
         <!--深層資料繫節-->

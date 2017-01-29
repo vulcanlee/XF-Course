@@ -4,8 +4,14 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismUnityApp8.Views.MainPage"
-             Title="MainPage">
+             Title="導航工具列設計範例">
 
+    <!--導航工具列設計範例
+    這個專案，將會練習如何在導航工具列上，加入導航工具列按鈕，讓這個頁面多了一寫操作命令選擇-->
+
+    <!--請使用底下 Property Element 的表示方式，在這個容器內，加入您想要設計的導航工具列按鈕 ToolbarItem
+    更多關於導航工具列按鈕的用法，可以參考
+    https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="OK" Clicked="ToolbarItem_Clicked" />
         <ToolbarItem Text="取消" Command="{Binding 取消Command}"/>

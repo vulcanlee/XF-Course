@@ -14,11 +14,11 @@ namespace NavigationPageLab
             InitializeComponent();
             btnPage1.Clicked += (s, e) =>
             {
+                //使用這種方式切換頁面，為何無法回到上一頁
                 App.Current.MainPage = new Page1();
             };
             btnNaviPage1.Clicked += async (s, e) =>
             {
-                // 這裡會閃退，為什麼?
                 await Navigation.PushAsync(new Page1());
             };
         }

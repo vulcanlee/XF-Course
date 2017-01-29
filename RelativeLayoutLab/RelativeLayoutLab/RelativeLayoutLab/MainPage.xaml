@@ -7,37 +7,39 @@
     <RelativeLayout>
         <!--試著修改 XConstraint / YConstraint & Property 的 Height / Width，看看有何變化-->
         <!--藍色的矩形，會隨著紅色方框而移動-->
-        <BoxView Color="Red" x:Name="redBox"
-        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+        <BoxView 
+            Color="Red" x:Name="redBox"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Width,Factor=.3,Constant=0}"
-        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Height,Factor=.1,Constant=0}"
-        RelativeLayout.WidthConstraint="{ConstraintExpression
+            RelativeLayout.WidthConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
-        RelativeLayout.HeightConstraint="{ConstraintExpression
+            RelativeLayout.HeightConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Height,Factor=.8,Constant=0}" />
 
-        <BoxView Color="Blue" x:Name="blueBox"
-        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+        <BoxView 
+            Color="Blue" x:Name="blueBox"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=redBox,Property=Y,Factor=1,Constant=20}"
-        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=redBox,Property=X,Factor=1,Constant=20}"
-        RelativeLayout.WidthConstraint="{ConstraintExpression
+            RelativeLayout.WidthConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=.5,Constant=0}"
-        RelativeLayout.HeightConstraint="{ConstraintExpression
+            RelativeLayout.HeightConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}" />
 
 
-        <BoxView Color="Green"
-        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+        <BoxView 
+            Color="Green"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=blueBox,Property=Y,Factor=1,Constant=20}"
-        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=blueBox,Property=X,Factor=1,Constant=20}"
-        RelativeLayout.WidthConstraint="{ConstraintExpression
+            RelativeLayout.WidthConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=0,Constant=50}"
-        RelativeLayout.HeightConstraint="{ConstraintExpression
+            RelativeLayout.HeightConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Height,Factor=0,Constant=50}" />
-
 
     </RelativeLayout>
 </ContentPage>

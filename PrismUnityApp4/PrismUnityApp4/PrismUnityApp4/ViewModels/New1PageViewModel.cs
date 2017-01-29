@@ -44,6 +44,7 @@ namespace PrismUnityApp4.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
+            //您可以在這裡，把導航參數取得回來，每個導航參數物件值 object 型別，因此，您需要做適度轉型
             if (parameters.ContainsKey("Where"))
             {
                 var foo1 = parameters["Where"] as string;

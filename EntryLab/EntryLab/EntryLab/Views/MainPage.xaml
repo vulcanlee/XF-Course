@@ -6,6 +6,9 @@
              x:Class="EntryLab.Views.MainPage"
              Title="MainPage">
 
+    <!--這個練習專案，將會學習 Entry 這個控制項的各種不同用法
+    這包括了使用提示浮水印、指定使用軟體鍵盤格式、預設輸入文字、設定提示浮水印文字顏色、字體大小與格式-->
+    
     <StackLayout HorizontalOptions="Fill" VerticalOptions="Center"
                  Margin="20,0">
         <Label Text="一般" />

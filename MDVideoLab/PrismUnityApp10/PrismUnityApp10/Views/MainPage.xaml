@@ -5,7 +5,9 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismUnityApp10.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-  </StackLayout>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <!--為什麼同樣導航指令，從這裡進行導航到頁面 BPage，卻有工具列-->
+        <Button Text="Page2(相對導航，有導航工具列)" Command="{Binding Page2Command}"/>
+    </StackLayout>
 </ContentPage>

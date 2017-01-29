@@ -5,10 +5,17 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="DeepLink.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
+
+    <!--在這個練習專案，我們將來練習如何透過 Prism 提供的 INavigationService 介面物件，進行各種頁面導航的操作。
+    其中，包含了相對頁面導航的方法、深度導航、與自訂深度導航。-->
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <!--按下這個按鈕，將會導航到下一個頁面-->
         <Button Text="Navi > P1" Command="{Binding 導航到一個頁面Command}" />
+        <!--使用 Prism 提供的深度導航功能，但是，您可以看的出來錯誤問題在哪裡嗎?-->
         <Button Text="Navi > P1 > P2 > P3" Command="{Binding 連續導航到兩個頁面Command}" />
+        <!--解決 Prism 深度導航，連續兩個 ContentPage 的問題-->
         <Button Text="Navi > P1 > P2 > P3" Command="{Binding 連續導航到兩個頁面_但手動Command}" />
     </StackLayout>
 </ContentPage>

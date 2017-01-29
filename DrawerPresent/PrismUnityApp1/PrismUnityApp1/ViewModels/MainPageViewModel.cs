@@ -41,6 +41,8 @@ namespace PrismUnityApp1.ViewModels
             _eventAggregator = eventAggregator;
             顯示抽屜Command = new DelegateCommand(()=>
             {
+                // 透過 Prism 事件聚合器，發出事件，要求顯示導航抽屜面板
+                // 這是一個很重要的技巧，可以讓您不同的 ViewModel  或者不同頁面，進行溝通
                 _eventAggregator.GetEvent<OpenDrawer>().Publish(true);
             });
         }

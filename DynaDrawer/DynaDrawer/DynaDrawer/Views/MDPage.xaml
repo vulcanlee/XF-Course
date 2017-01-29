@@ -5,6 +5,10 @@
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="DynaDrawer.Views.MDPage">
 
+    <!--這個練習將會學習如何設計與使用 MasterDetailPage-->
+    <!--在這個導航抽屜面板中，將會提供動態可收合的功能表，因此，透過這個練習，您將可以設計導航面板，使其具有更多樣性的效果。
+    MasterDetailPage的導航面板，將是由 Master 這個屬性來呈現，這是一個使用 ContentPage 來製作出來的面板--> 
+   
     <MasterDetailPage.Master>
         <ContentPage 
             BackgroundColor="#c9e084"
@@ -12,6 +16,7 @@
             <StackLayout
                 Orientation="Vertical"  Spacing="20"
                 >
+                <!--這裡定義這個應用程式的名稱，您可以套用各種不同圖片-->
                 <Grid>
                     <BoxView Color="#af843f" HeightRequest="120" />
                     <Label Text="多奇數位創意" TextColor="White" FontSize="Large"
@@ -19,12 +24,14 @@
                            />
                 </Grid>
 
+                <!--這裡不是使用 ListView，而是使用 ScrollView，您可以在這裡加入任何您喜歡的控制項-->
                 <ScrollView
                     Margin="10,30"
                     Orientation="Vertical">
                     <StackLayout Orientation="Vertical" Spacing="10" >
                         <StackLayout Orientation="Vertical">
                             <StackLayout Orientation="Horizontal" >
+                                <!--這裡使用手勢認知功能，若有點選手勢發生，就會執行相對應的 ICommand 委派方法-->
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding 功能表SL1Command}" />
                                 </StackLayout.GestureRecognizers>
@@ -34,9 +41,10 @@
                                 <Label Text="主功能1"
                                        FontSize="Large"
                                        TextColor="#709600"/>
-
                             </StackLayout>
-                            
+
+                            <!--透過 IsVisible 綁訂到 ViewModel 內的 功能表點選1，只要這個屬性為 true，則，底下的控制項就會顯示出來-->
+                            <!--底下容器內的每個項目，將會以水平的方式排列-->
                             <StackLayout IsVisible="{Binding 功能表點選1}">
                                     <StackLayout Orientation="Horizontal">
                                         <BoxView Color="Red" WidthRequest="80"/>
@@ -47,13 +55,13 @@
                                         <BoxView Color="Red" WidthRequest="80"/>
                                         <BoxView Color="Red" WidthRequest="80"/>
                                     </StackLayout>
-
                             </StackLayout>
                         </StackLayout>
 
                         <StackLayout  Spacing="10" Orientation="Vertical">
                             <StackLayout Orientation="Horizontal"                             
                              >
+                                <!--這裡使用手勢認知功能，若有點選手勢發生，就會執行相對應的 ICommand 委派方法-->
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding 功能表SL2Command}" />
                                 </StackLayout.GestureRecognizers>
@@ -65,6 +73,8 @@
                                        TextColor="#709600"/>
                             </StackLayout>
 
+                            <!--透過 IsVisible 綁訂到 ViewModel 內的 功能表點選21，只要這個屬性為 true，則，底下的控制項就會顯示出來-->
+                            <!--底下容器內的每個項目，將會以垂直的方式排列-->
                             <StackLayout IsVisible="{Binding 功能表點選2}"
                                 Orientation="Vertical" Margin="30,0">
                                 <Label Text="子功能2-1"

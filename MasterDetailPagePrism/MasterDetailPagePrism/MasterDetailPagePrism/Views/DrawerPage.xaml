@@ -5,6 +5,10 @@
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="MasterDetailPagePrism.Views.DrawerPage">
 
+    <!--使用 Prism 開發框架，建立具有導航抽屜功能的頁面
+    
+    這個練習專案，將會使用 Prism 開發框架來設計，所以，在MasterDetailPage，僅需要定義導航抽屜面板，而 Detail 屬性部分，則會由 Prism 的導航 URI 來提供-->
+    
     <MasterDetailPage.Master>
         <ContentPage Title="Master" BackgroundColor="Yellow" Icon="hamburger.png">
             <Label Text="Master Page"/>

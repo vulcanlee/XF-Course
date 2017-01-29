@@ -30,6 +30,10 @@ namespace PrismDS.ViewModels
         #endregion
 
         ISayHello _SayHello;
+
+        //在這裡，使用建構式注入了 ISayHello 介面地當時實作物件
+        // ISayHello 的實作物件將會於每個原生專案內茶看到
+        // 在原生專案內，其類別必須標示 [assembly: Xamarin.Forms.Dependency(typeof(SayHello))]
         public MainPageViewModel(ISayHello sayHello)
         {
             _SayHello = sayHello;

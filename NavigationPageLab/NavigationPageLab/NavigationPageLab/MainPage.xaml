@@ -6,6 +6,10 @@
              Title="MainPage"
              x:Class="NavigationPageLab.MainPage">
 
+    <!--練習 Xamarin.Forms 的頁面導航切換
+    這個練習專案內有兩個按鈕，第一個按鈕於切換頁面之後，就無法再回到原先頁面；
+    而第二個按鈕，將可以切換到第二個頁面，也可以使用工具列或者硬體回上一頁按鈕，回到上一頁-->
+    
     <StackLayout>
         <Label Text="Welcome to Xamarin Forms!"
            VerticalOptions="Center"

@@ -7,13 +7,17 @@
              x:Name="contentPage"
              Title="{Binding PageTitle}">
 
+    <!--在這個專案中，將會練習導航抽屜頁面的開發設計方式。
+    這包括了，如何資料繫結導航工具列頁面名稱、手動推出導航抽屜、導航頁面的設計方式、取得導航抽屜與子頁面的設計尺寸。-->
     <StackLayout 
         Orientation="Vertical" Spacing="0" 
         HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="{Binding Title}" />
+        <!--這裡使用了一個資料繫結技巧，資料繫結資料來源為參考某個控制項的屬性 Attribute，而不是從 ViewModel 來的-->
         <Label Text="{Binding Source={x:Reference contentPage}, Path=Width, StringFormat='Detail: {0:F0}'}" FontSize="Large" />
         <Label Text="{Binding Source={x:Reference contentPage}, Path=Height, StringFormat=' &#x00D7; {0:F0}'}" FontSize="Large" />
 
+        <!--這個按鈕將會顯示導航抽屜面板-->
         <Button Text="顯示抽屜" Command="{Binding 顯示抽屜Command}" />
     </StackLayout>
 </ContentPage>

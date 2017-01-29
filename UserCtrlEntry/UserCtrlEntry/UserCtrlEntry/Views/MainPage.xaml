@@ -6,6 +6,11 @@
              xmlns:UserControls="clr-namespace:UserCtrlEntry.UserControls"
              x:Class="UserCtrlEntry.Views.MainPage"
              Title="MainPage">
+    
+    <!--這裡將展示如何自行客製一個使用者控制項-->
+    <!--當使用者所輸入文字長度超過使用者控制項的定義，其右方的圖片，將會變成綠色，告知使用者，您輸入的文字內容符合規定；
+    在這裡，您可以針對不同條件做出不同的條件檢查，也可以使用正規表示式來判斷使用者輸入的內容是否符合規範-->
+    
     <StackLayout 
         Margin="20,0"
         HorizontalOptions="Center" VerticalOptions="Center">
@@ -16,5 +21,6 @@
         <UserControls:MyEntry BindingContext="{Binding ID}"/>
         <!--宣告一個使用者控制項，並且綁定 ViewModel 內的 Email Property，設定這個文字輸入盒，具有輸入電子郵件格式檢查能力-->
         <UserControls:MyEntry BindingContext="{Binding Email}"/>
+       
     </StackLayout>
 </ContentPage>

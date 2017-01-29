@@ -5,11 +5,16 @@
              BackgroundColor="Yellow"
              x:Class="ContentPageLab.MainPage">
 
+    <!--這個專案將會練習 Xamarin.Forms 原生提供的頁面導航功能，但是不透過導航頁面來操作所遇到的問題
+    在開發上，您可能需要使用 Code Behind 來撰寫頁面商業邏輯-->
+    
     <StackLayout>
         <Label Text="Welcome to Xamarin Forms!"
            VerticalOptions="Center"
            HorizontalOptions="Center" />
+        <!--使用 Application.MainPage 來設定 Xamarin.Forms的首頁頁面-->
         <Button x:Name="btnPage1" Text="切換到 Page1" />
+        <!--使用 Navigate 切換到 Page1，會閃退，為什麼會發生這樣的問題-->
         <Button x:Name="btnNaviPage1" Text="使用 Navigate 切換到 Page1，會閃退" />
     </StackLayout>
 

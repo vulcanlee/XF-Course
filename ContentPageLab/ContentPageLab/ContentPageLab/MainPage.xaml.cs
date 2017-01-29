@@ -15,6 +15,7 @@ namespace ContentPageLab
 
             btnPage1.Clicked += (s, e) =>
               {
+                  //設定這個頁面的主要頁面來源
                   App.Current.MainPage = new Page1();
               };
             btnNaviPage1.Clicked += async (s, e) =>

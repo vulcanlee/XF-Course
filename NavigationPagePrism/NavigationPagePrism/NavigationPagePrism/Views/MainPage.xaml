@@ -5,6 +5,11 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="NavigationPagePrism.Views.MainPage"
              Title="MainPage">
+    
+    <!--如何客製化導航工具列
+    在這個練習專案中，您將會學習如何客製化導航工具列；我們將在 NewPage 頁面中，使用附加屬性表示方式，
+    NavigationPage.HasBackButton="False" 設定這個頁面的導航工具列沒有回上頁按鈕圖片-->
+    
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Switch IsToggled="{Binding 是否啟用, Mode=TwoWay}" />
         <Button Text="切換到新頁面，可返回" Command="{Binding 切換到新頁面Command}" />

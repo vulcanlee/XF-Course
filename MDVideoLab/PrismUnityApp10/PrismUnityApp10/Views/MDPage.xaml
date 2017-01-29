@@ -5,6 +5,11 @@
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="PrismUnityApp10.Views.MDPage">
 
+    <!--導航抽屜頁面與絕對導航
+    
+    這個範例中，將會展示如何在導航抽屜面板中，切換到其他的工作頁面，不過，在此，使用的是絕對導航方式，在這個方式中，將會清除導航堆疊。
+    您也可以使用相對導航方是，看看這兩種導航操作，有何不同-->
+    
     <MasterDetailPage.Master>
         <ContentPage Title="主功能表">
             <StackLayout
@@ -12,8 +17,16 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 >
-                <Button Text="Page1" Command="{Binding Page1Command}" />
-                <Button Text="Page2" Command="{Binding Page2Command}" />
+                
+                <!--這個按鈕，將會使用絕對導航方式，原有導航堆疊內的資訊，將會被清除掉-->
+                <Button Text="Page1(絕對導航)" Command="{Binding Page1Command}" />
+                
+                <!--這個按鈕使用相對導航方式，因此，您將會具有回上一頁的功能-->
+                <!--為什麼同樣導航指令，從這裡進行導航到頁面 BPage，卻沒有工具列，從子頁面點選的才有-->
+                <Button Text="Page2(相對導航，為何沒有導航工具列)" Command="{Binding Page2Command}" />
+
+                <!--為何使用這個方法，就可以看到導航工具列-->
+                <Button Text="Page2(使用事件聚合器，具有導航工具列)" Command="{Binding Page2EventCommand}" />
             </StackLayout>
             
         </ContentPage>

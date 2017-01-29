@@ -14,7 +14,7 @@ namespace iOSLab
         public override UIWindow Window
         {
             get;
-            set;
+            set; 
         }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)

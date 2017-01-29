@@ -22,6 +22,7 @@ namespace DeepLink.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
+            //判斷是否有傳遞 Auto 參數，若有的話，則取出下一個頁面的名稱，導航到下一個頁面
             if (parameters.ContainsKey("Auto"))
             {
                 var isAuto = parameters["Auto"] as string;
