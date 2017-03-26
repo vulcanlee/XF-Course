@@ -64,24 +64,23 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $EntryType$ Attached Property
-        public static readonly BindableProperty $EntryTypeProperty$ =
+      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $EntryType$ 附加屬性 Attached Property
+        public static readonly BindableProperty $EntryType$Property =
                BindableProperty.CreateAttached(
-                   propertyName: "$EntryType$",
-                   returnType: typeof($string$),
-                   declaringType: typeof($Entry$),
-                   defaultValue: $null$,
-                   defaultBindingMode: BindingMode.$OneWay$,
-                   validateValue: $null$,
-                   propertyChanged: $OnEntryTypeChanged$);
+                   propertyName: "$EntryType$",   // 屬性名稱 
+                   returnType: typeof($string$), // 回傳類型 
+                   declaringType: typeof($Entry$), // 宣告類型 
+                   defaultValue: $null$, // 預設值 
+                   propertyChanged: $OnEntryTypeChanged$  // 屬性值異動時，要執行的事件委派方法
+               );
 
         public static void Set$EntryType$(BindableObject bindable, $string$ entryType)
         {
-            bindable.SetValue($EntryTypeProperty$, entryType);
+            bindable.SetValue($EntryType$Property, entryType);
         }
         public static $string$ Get$EntryType$(BindableObject bindable)
         {
-            return ($string$)bindable.GetValue($EntryTypeProperty$);
+            return ($string$)bindable.GetValue($EntryType$Property);
         }
         #endregion
 ]]></Code>

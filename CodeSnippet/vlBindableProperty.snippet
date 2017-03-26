@@ -57,23 +57,24 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $EntryType$ BindableProperty
-        public static readonly BindableProperty $EntryTypeProperty$ =
+      <Code Language="csharp" Delimiter="$"><![CDATA[        #region $EntryType$ 可綁定屬性 BindableProperty
+        public static readonly BindableProperty $EntryType$Property =
             BindableProperty.Create("$EntryType$", // 屬性名稱 
                 typeof($string$), // 回傳類型 
                 typeof($DoggyEntry$), // 宣告類型 
                 $"None"$, // 預設值 
-                propertyChanged: $OnEntryTypeChanged$);
+                propertyChanged: $OnEntryTypeChanged$  // 屬性值異動時，要執行的事件委派方法
+            );
 
         public $string$ $EntryType$
         {
             set
             {
-                SetValue($EntryTypeProperty$, value);
+                SetValue($EntryType$Property, value);
             }
             get
             {
-                return ($string$)GetValue($EntryTypeProperty$);
+                return ($string$)GetValue($EntryType$Property);
             }
         }
         #endregion
